@@ -1,0 +1,75 @@
+.camera-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .analysis-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 40%;
+        height: 100%;
+    }
+
+    &.two-videos {
+        .video-frame {
+            width: 100%; // Her bir video, kendi konteynerinin tam genişliğini alır.
+            height: 100%; // Yükseklik otomatik olarak ayarlanacak.
+            object-fit: contain; // Videoyu kırpma olmadan maksimum alana yay.
+        }
+
+        .video-container {
+            width: 50%; // Her bir video konteyneri genişliğin yarısını alır.
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &:first-child {
+                margin-right: 2px; // İki video arasında ufak bir boşluk oluşturur.
+            }
+        }
+    }
+
+    &.dark {
+        box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.4);
+    }
+
+    &.light {
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+    }
+}
+
+.video-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #ff0000; // Kırmızı metin rengi korunur.
+    background-color: rgba(255, 255, 255, 0.7); // Arka planı daha beyaz ve yarı opak yapar.
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bolder;
+    font-size: 16px;
+}

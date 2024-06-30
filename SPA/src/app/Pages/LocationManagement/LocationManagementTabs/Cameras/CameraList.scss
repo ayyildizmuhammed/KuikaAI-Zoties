@@ -1,0 +1,19 @@
+/* CamerasTab.scss veya benzeri bir CSS/SCSS dosyasında */
+.camera-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 15px;
+    padding-top: 10px;
+}
+
+@media (min-width: 1200px) {
+    .camera-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 599px) {
+    .camera-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

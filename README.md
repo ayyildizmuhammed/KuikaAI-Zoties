@@ -1,3 +1,3 @@
-# KuikaAI-Zoties
-Kuika AI Hackathon
-Python 3.8
+# motus-web
+
+Motus Web Application

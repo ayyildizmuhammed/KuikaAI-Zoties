@@ -1,0 +1,50 @@
+.selected-filters-banner {
+    background: var(--bs-body-bg);
+    padding: 7px 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    border: 1px solid var(--bs-gray-light);
+
+    .filter-trigger {
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+    .filter-trigger i {
+        margin-right: 5px;
+    }
+
+    .btn-outline-primary {
+        border-color: var(--bs-primary);
+        color: var(--bs-primary);
+        &:hover {
+            background: var(--bs-primary);
+            color: var(--bs-white);
+        }
+    }
+}
+.summary-card {
+    display: flex !important; /* Flexbox kullanımı */
+    flex-direction: column !important; /* Dikey yön */
+}
+
+.summary-card-body {
+    display: flex !important; /* Flexbox kullanımı */
+    align-items: center !important; /* İçerikleri dikey olarak ortala */
+    justify-content: center !important; /* İçerikleri yatay olarak ortala */
+    padding: 0 !important; /* Padding sıfırla */
+    height: 50px;
+}
+
+.pie-chart-container {
+    width: 50%; /* Pie chart genişliği */
+    display: flex; /* Flexbox kullanımı */
+    justify-content: center; /* Pie chart'ı ortala */
+}
+
+.legend-container {
+    width: 50%; /* Legend genişliği */
+    display: flex; /* Flexbox kullanımı */
+    flex-direction: column; /* Dikey yön */
+    justify-content: center; /* Legend'ları dikey olarak ortala */
+}

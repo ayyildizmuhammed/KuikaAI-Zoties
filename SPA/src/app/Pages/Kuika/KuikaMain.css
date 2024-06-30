@@ -1,0 +1,69 @@
+.kuika-main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.summary-container,
+.json-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+    margin: 10px 0;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e1e1e1;
+}
+
+.summary-content {
+    font-family: 'IBM Plex Sans'; /* İstediğiniz font ailesini buraya ekleyin */
+    font-size: 16px; /* İstediğiniz font boyutunu ayarlayın */
+    line-height: 1.5; /* Satır yüksekliğini ayarlayın */
+}
+
+.summary-content,
+.json-content {
+    overflow: auto;
+    flex: 1;
+}
+
+.summary-container {
+    background-color: #f9f9f9;
+    height: 69vh !important;
+}
+
+.json-container {
+    background-color: #fff;
+}
+
+.json-editor-container {
+    position: relative;
+    height: 60vh;
+}
+
+.export-button-container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.summary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

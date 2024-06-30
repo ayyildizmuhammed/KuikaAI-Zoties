@@ -1,0 +1,85 @@
+/* Filter paneli ortalamak için ekstra stillemeler */
+.filter-panel-container {
+  max-width: 600px; /* Maksimum genişlik */
+  width: 100%;
+  margin: auto;
+  overflow-y: auto; /* İçerik fazlaysa kaydırma çubuğu */
+  z-index: 1051; /* Overlay'den daha üstte */
+}
+
+.filter-panel {
+  visibility: visible;
+  opacity: 1;
+  position: relative; /* Ayırıcılar için */
+  top: 100%;
+  left: 0;
+  right: 0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Daha belirgin bir gölge */
+  border-radius: 8px; /* Köşeleri yuvarlat */
+  z-index: 1050; /* Diğer içeriklerin üstünde göster */
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  backdrop-filter: blur(5px); /* Arka planı blurlaştır */
+}
+
+.filter-panel-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: flex-start;
+}
+
+.filter-panel-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 1rem;
+}
+
+.filter-panel-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.filter-panel-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.filter-panel-exit {
+  opacity: 1;
+}
+
+.filter-panel-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.filter-item .form-label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+
+.filter-item {
+  flex: 1 1 30%; /* Her bir item en fazla satırın %30'unu kaplasın */
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  min-width: 150px; /* Minimum genişlik */
+}
+
+.filter-item:not(:last-child):after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #ddd; /* Ayırıcı çizginin rengi */
+}
+
